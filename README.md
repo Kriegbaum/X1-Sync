@@ -28,7 +28,9 @@ OPERATING INSTRUCTIONS:
 
 
 CONTRIBUTING:
+
 	-Feel free to make changes, make yourself a branch first though
+	
 	-Please send error reports and issues, this was a learning exercise for me, and reports will only help me
 
 
@@ -36,11 +38,17 @@ CONTRIBUTING:
 TODO:
 
 	-Speed up sync process (I need to learn how to multithread)
+	
 	-Find some way to prevent device from sleeping using the software
+	
 	-Create a cleanup function that removes files not in the library
+	
 		-Make a setting that allows user to disable this
+		
 	-Purchase more bagels (refrigerator is empty)
+	
 	-Make this thing so cross-platform, it’ll make your nose bleed
+	
 
 
 
