@@ -48,7 +48,15 @@ def read_settings():                                                            
         settings.readline()
         fiio_dir = settings.readline()                                          #Pull device directory path
         settings.close()
-        return [tunes_library_path, fiio_dir]
+        print ('I\'ve found your device')
+        print('So, right now, I\'ve got your library at', tunes_library_path, 'and your device at', fiio_dir)
+        print('Does this look correct?')
+        print('Y/N')
+        answer = input()
+        if answer.lower() == 'yes' or 'y':
+            return [tunes_library_path, fiio_dir]
+        else:
+            setup()
     else:
         setup()                                                                 #If no settings, run user through setup
 
