@@ -1,4 +1,4 @@
-X1_Sync v0.1
+X1_Sync v0.2
 
 	A utility that syncs a non-apple device with an iTunes library in Mac OS X.
 
@@ -57,6 +57,9 @@ VERSION HISTORY:
 	v0.1:
 	-First!
 	-I made a thing, here it is!
+	v0.2:
+	-fixed the check ifnewest function
+	-explored multithreading options, determined that it is not nessecary
 
 
 
