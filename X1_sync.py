@@ -125,7 +125,7 @@ def make_tree(trackID):                                                         
     if not os.path.exists(album_path):                                          #See if directory already exists
         os.makedirs(album_path)                                                 #If not, create it
 
-def check_ifnewest(trackID):                                                    #Don't bother copying files that have not changed
+def check_ifnewest(source_path, target_path):                                   #Don't bother copying files that have not changed
     if os.path.exists(target_path):                                             #See if file exists already
         mt = os.path.getmtime(source_path)
         ct = os.path.getmtime(target_path)
@@ -152,7 +152,7 @@ for trackID in tunes_library['Tracks']:                                         
         target_path = get_fiio_path(trackID)
         if '.Trash' in source_path:                                             #Trashed tracks will sometimes remain in library, they cannot be copied
             continue
-        if not check_ifnewest(trackID):                                         #See if file exists and is most recent
+        if check_ifnewest(source_path, target_path) == False:                                    #See if file exists and is most recent
             make_tree(trackID)                                                  #Establish filetree
             shutil.copy(source_path, target_path)                               #If not, copy that shit
         else:
